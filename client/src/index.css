@@ -1,0 +1,14 @@
+/* Selects each and every element in the page */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f2f2f2;
+  color: #101010;
+}

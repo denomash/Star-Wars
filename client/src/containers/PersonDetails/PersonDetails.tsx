@@ -8,9 +8,7 @@ import { IPerson } from "../../types/common";
 
 import Loader from "../../components/Common/Loader";
 import PersonDetailStyles from "../../components/styled/PersonDetailsStyles";
-
-// utils
-import getInitials from "../../utils/getInitials";
+import PersonDetailsComponent from "../../components/PersonDetails/PersonDetails";
 
 // hooks
 import useGetPerson from "../../hooks/useGetPerson";
@@ -40,37 +38,7 @@ const PersonDetails: FC<PageType> = () => {
         </div>
 
         <div className={`details-container ${loading ? "center" : ""}`}>
-          {loading ? (
-            <Loader />
-          ) : (
-            <div className="details">
-              <div className="avatar-container">
-                <div className="avatar">{getInitials(user.name)}</div>
-                <h2>{user.name}</h2>
-              </div>
-              <table>
-                <tr>
-                  <th>Height</th>
-                  <td>{user.height}</td>
-                </tr>
-
-                <tr>
-                  <th>Gender</th>
-                  <td>{user.gender}</td>
-                </tr>
-
-                <tr>
-                  <th>Mass</th>
-                  <td>{user.mass}</td>
-                </tr>
-
-                <tr>
-                  <th>Home World</th>
-                  <td>{user.homeworld}</td>
-                </tr>
-              </table>
-            </div>
-          )}
+          {loading ? <Loader /> : <PersonDetailsComponent user={user} />}
         </div>
       </PersonDetailStyles>
     </div>

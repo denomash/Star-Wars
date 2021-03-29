@@ -22,8 +22,22 @@ const NavbarStyles = styled.div`
     left: 0;
     height: 120px;
     margin-right: auto;
+    cursor: pointer;
   }
-  cursor: pointer;
+
+  @media screen and (max-width: 520px) {
+    justify-content: flex-end;
+
+    h1 {
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    h1 {
+      margin-right: 10px;
+    }
+  }
 `;
 
 export default NavbarStyles;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 
   .container {
@@ -29,6 +29,10 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     margin-top: 25px;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 916px) {
+    width: 100%;
   }
 `;
 
